@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout responsivo</title>
+        <style>
+            html, body{
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                font-family: Arial, sans-serif;
+                color: white;
+            }
+            .layout-container{
+                display: flex;
+                min-height: 100vh;
+                flex-direction: row;
+            }
+            header{
+                background-color: darkred;
+                height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+            }
+            footer{
+                background-color: darkred;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .tituloRodapeCabecalho{
+                font-size: 2rem;
+            }
+            .bloco{
+                flex: 1;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 500px;
+            }
+            .bloco-1{
+                background-color: black;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+            .bloco-2{
+                background-color: green;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+            @media (max-width: 600px){
+                header{
+                    width: 100%;
+                    font-size: 1rem;
+                }
+                footer{
+                    width: 100%;
+                }
+                .tituloRodapeCabecalho{
+                    font-size: 1rem;
+                }
+                .bloco{
+                    width: 84%;
+                }
+                .bloco-1{
+                    margin-bottom: 0px;
+                }
+                .layout-container{
+                    flex-direction: column;
+                }
+                .bloco h1{
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="tituloRodapeCabecalho">Bem vindo ao meu site da questao 5 da prova 1!</h1>
+        </header>
+        <main class="layout-container">
+            <section class="bloco bloco-1">
+                <h1>Bloco 1</h1>
+                <p>
+                    metade esquerda no pc
+                </p>
+                <p>
+                    ou parte de cima do celular
+                </p>
+            </section>
+            <section class="bloco bloco-2">
+                <h1>Bloco 2</h1>
+                <p>
+                    metade direita do pc
+                </p>
+                <p>
+                    ou parte de baixo do celular
+                </p>
+            </section>
+        </main>
+        <footer>
+            <h1 class="tituloRodapeCabecalho">Obrigado por visitar o site</h1>
+            um rodapé só pra ficar bonitinho
+        </footer>
+    </body>
+</html>
