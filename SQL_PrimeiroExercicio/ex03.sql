@@ -1,0 +1,4 @@
+SELECT e.FIRST_NAME || ' ' || e.LAST_NAME AS "Nome do Funcionario",
+    j.JOB_ID AS "Projetos"
+FROM hr.EMPLOYEES e
+LEFT JOIN HR.JOB_HISTORY j ON e.EMPLOYEE_ID = j.EMPLOYEE_ID

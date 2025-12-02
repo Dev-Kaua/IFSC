@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas JS</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="sidebar">
+        <button class="btn-nova" onclick="novaNota()">+ Nova Nota</button>
+        <div id="lista-notas" class="lista"></div>
+      </div>
+
+      <div class="editor">
+        <input type="text" id="nota-titulo" placeholder="Título da Nota...">
+        <textarea id="nota-conteudo" placeholder="Digite sua anotação aqui..."></textarea>
+
+        <div class="editor-botoes">
+          <button class="btn-salvar" onclick="salvarNota()">Salvar Nota</button>
+          <button class="btn-excluir" onclick="excluirNota()">Excluir</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

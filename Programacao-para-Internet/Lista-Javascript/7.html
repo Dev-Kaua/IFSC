@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mudar Cor de Fundo</title>
+  <style>
+    body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3498db; /* Cor inicial */
+        transition: background-color 0.5s;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #eee;
+      border: 1px solid #999;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="mudarCor()">Alterar Cor de Fundo</button>
+
+  <script>
+    function mudarCor() {
+      var letras = '0123456789ABCDEF';
+      var cor = '#';
+      for (var i = 0; i < 6; i++) {
+        cor += letras[Math.floor(Math.random() * 16)];
+      }
+      document.body.style.backgroundColor = cor;
+    }
+  </script>
+</body>
+</html>

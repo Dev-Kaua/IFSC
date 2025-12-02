@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Números Primos</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { padding: 8px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Verificador de Números Primos</h1>
+  <input type="number" id="inicio" placeholder="Início">
+  <input type="number" id="fim" placeholder="Fim">
+  <button onclick="verificarPrimos()">Verificar</button>
+  <div id="resultadoPrimos"></div>
+
+  <script>
+    function verificarPrimos() {
+      var inicio = parseInt(document.getElementById("inicio").value);
+      var fim = parseInt(document.getElementById("fim").value);
+      var resultadoDiv = document.getElementById("resultadoPrimos");
+      var primos = [];
+
+      if (isNaN(inicio) || isNaN(fim) || inicio > fim) {
+        resultadoDiv.innerText = "Por favor, insira um intervalo válido.";
+        return;
+      }
+
+      for (var i = inicio; i <= fim; i++) {
+        if (ehPrimo(i)) {
+          primos.push(i);
+        }
+      }
+
+      resultadoDiv.innerText = "Primos encontrados: " + primos.join(", ");
+    }
+
+    function ehPrimo(num) {
+      if (num < 2) return false;
+      for (var i = 2; i < num; i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

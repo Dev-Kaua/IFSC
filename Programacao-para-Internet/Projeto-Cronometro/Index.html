@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cronômetro JS</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="painel-relogio">
+        <div id="tempo">00:00:00</div>
+
+        <div class="botoes">
+          <button class="btn iniciar" onclick="iniciar()">Iniciar (I)</button>
+          <button class="btn pausar" onclick="pausar()">Pausar (P)</button>
+          <button class="btn zerar" onclick="zerar()">Zerar (Esc)</button>
+        </div>
+
+        <p class="instrucao">Use as teclas de atalho ou os botões</p>
+      </div>
+
+      <div class="painel-paradas">
+        <h2>Paradas</h2>
+          <ul id="lista-paradas">
+          </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

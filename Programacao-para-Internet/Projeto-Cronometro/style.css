@@ -1,0 +1,89 @@
+body{
+  background-color: #333;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  background-color: #444;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  overflow: hidden;
+  width: 700px;
+  height: 400px;
+}
+
+.painel-relogio {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid #555;
+}
+
+#tempo {
+  font-size: 80px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.botoes button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.iniciar { background-color: #28a745; }
+.pausar  { 
+  background-color: #ffc107; 
+  color: black !important; 
+}
+.zerar   { background-color: #dc3545; }
+
+.instrucao {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 20px;
+}
+
+.painel-paradas {
+  flex: 1;
+  background-color: #ddd;
+  color: #333;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.painel-paradas h2 {
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: monospace;
+  text-align: center;
+}

@@ -1,33 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div>
-      <label for="">Peso</label>
-      <input id="peso" type="text"><br>
-      <label for="">Altura</label>
-      <input id="altura" type="text"><br>
-      <button>Calcular IMC</button>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorteio de Números</title>
+</head>
+<body>
+  <h1>Sorteio de Números</h1>
+  
+  <input type="number" id="min" placeholder="Mínimo">
+  <input type="number" id="max" placeholder="Máximo">
+  <button onclick="sortear()">Sortear</button>
 
-    </div>
-    <div id="resultado"></div>
-    <script>
-      b=document.querySelector("button");
-      let inputPeso=document.querySelector("#peso");
-      let inputAltura=document.querySelector("#altura");
+  <p id="resultado" style="font-size: 24px; font-weight: bold;"></p>
+  
+  <h3>Histórico:</h3>
+  <ul id="lista-sorteados"></ul>
 
-      b.addEventListener("click", ()=>{
-        let peso=Number.parseFloat(inputPeso.value);
-        let altura=Number.parseFloat(inputAltura.value);
-        imc=peso/(altura**altura);
-        console.log(imc);
-        let resultado = document.getElementById("resultado");
-        resultado.innerHTML = `Seu IMC é ${imc.toFixed(2)}`;
-      })
-    </script>
-  </body>
+  <script>
+    var historico = [];
+
+    function sortear() {
+      var min = parseInt(document.getElementById("min").value);
+      var max = parseInt(document.getElementById("max").value);
+
+      if (isNaN(min) || isNaN(max) || min >= max) {
+        alert("Insira um intervalo válido.");
+        return;
+      }
+
+      var sorteado = Math.floor(Math.random() * (max - min + 1)) + min;
+      
+      var contador = 0;
+      for (var i = 0; i < historico.length; i++) {
+        if (historico[i] === sorteado) {
+          contador++;
+        }
+      }
+      historico.push(sorteado);
+
+      var textoResultado = sorteado;
+      if (contador > 0) {
+        textoResultado += " (Sorteado " + (contador + 1) + " vezes)";
+      }
+
+      document.getElementById("resultado").innerText = "Número: " + sorteado;
+
+      var itemLista = document.createElement("li");
+      itemLista.innerText = textoResultado;
+      document.getElementById("lista-sorteados").appendChild(itemLista);
+    }
+  </script>
+</body>
 </html>

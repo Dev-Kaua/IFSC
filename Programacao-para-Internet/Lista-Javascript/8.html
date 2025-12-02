@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Paleta (Tecla Espaço)</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .coluna {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 50px;
+      transition: background-color 0.3s;
+    }
+    .codigo-cor {
+      background-color: rgba(0,0,0,0.2);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    /* Instrução flutuante */
+    #aviso {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      text-shadow: 1px 1px 2px black;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="aviso">Pressione a tecla <strong>ESPAÇO</strong> para mudar as cores</div>
+
+  <div class="coluna" id="col1"><span class="codigo-cor">#3498db</span></div>
+  <div class="coluna" id="col2"><span class="codigo-cor">#9b59b6</span></div>
+  <div class="coluna" id="col3"><span class="codigo-cor">#e74c3c</span></div>
+  <div class="coluna" id="col4"><span class="codigo-cor">#f1c40f</span></div>
+  <div class="coluna" id="col5"><span class="codigo-cor">#2ecc71</span></div>
+
+  <script>
+    function gerarCorHex() {
+      var letras = '0123456789ABCDEF';
+      var cor = '#';
+      for (var i = 0; i < 6; i++) {
+        cor += letras[Math.floor(Math.random() * 16)];
+      }
+      return cor;
+    }
+
+    function atualizarCores() {
+      for (var i = 1; i <= 5; i++) {
+        var novaCor = gerarCorHex();
+        var div = document.getElementById('col' + i);
+        var span = div.querySelector('.codigo-cor');
+        
+        div.style.backgroundColor = novaCor;
+        span.innerText = novaCor;
+      }
+    }
+
+    document.body.onkeyup = function(e) {
+      if (e.code === "Space" || e.keyCode === 32) {
+        atualizarCores();
+      }
+    }
+
+    atualizarCores();
+  </script>
+</body>
+</html>

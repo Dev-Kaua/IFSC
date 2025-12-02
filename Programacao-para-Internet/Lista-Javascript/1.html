@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>O que é JavaScript?</title>
 </head>
 <body>
-  <button id="click">Clique em mim</button>
+  <h1 id="titulo-principal">O que é JavaScript?</h1>
+  
+  <p id="explicacao">
+      JavaScript foi criado para trazer interatividade às páginas web. Diferente de linguagens de servidor (como PHP ou Java), ele roda diretamente no navegador do cliente, permitindo respostas rápidas sem recarregar a página. O navegador cria um ambiente seguro chamado "sandbox" para impedir que o código acesse arquivos do computador do usuário indevidamente. Objetos globais importantes incluem o document (para manipular o HTML), console (para depuração) e alert (para mensagens).
+  </p>
+
+  <p>Hora atual: <span id="hora"></span></p>
 
   <script>
-    let b=document.querySelector("button")
-    let contador=0;
-    b.style.width="25vw"
-    b.style.height="25vh"
-    b.addEventListener("click", ()=>{
-      contador++;
-      b.innerHTML=contador;
-      allert("Ola mundao")
-    })
+    alert("Bem-vindo à página sobre JavaScript!");
+    
+    console.log("Mensagem registrada no console conforme solicitado.");
+    
+    document.getElementById("hora").innerHTML = new Date().toLocaleTimeString();
   </script>
 </body>
+</html>

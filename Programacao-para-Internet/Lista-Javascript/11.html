@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Storage</title>
+</head>
+<body>
+  <input type="text" id="nameInput" placeholder="Digite seu nome">
+  <button id="saveButton">Salvar</button>
+  <p id="greeting"></p>
+
+  <script>
+    var btn = document.getElementById('saveButton');
+    var input = document.getElementById('nameInput');
+    var greeting = document.getElementById('greeting');
+
+    var nomeSalvo = localStorage.getItem('nomeUsuario');
+    if (nomeSalvo) {
+      greeting.innerText = "Olá, " + nomeSalvo + "!";
+    }
+
+    btn.addEventListener('click', function() {
+      var nome = input.value;
+      if (nome) {
+        localStorage.setItem('nomeUsuario', nome);
+        greeting.innerText = "Olá, " + nome + "!";
+        alert("Nome salvo com sucesso!");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tipos de Variáveis</title>
+</head>
+<body>
+  <button onclick="executar()">Verificar Tipos</button>
+
+  <p id="pstring"></p>
+  <p id="pnumero"></p>
+  <p id="pboolean"></p>
+  <p id="pundefined"></p>
+  <p id="pnull"></p>
+  <p id="pobject"></p>
+  <p id="parray"></p>
+
+  <p id="resultados-operacoes"></p>
+
+  <script>
+    function executar() {
+      var vString = "Texto";
+      var vNumber = 10;
+      var vBoolean = true;
+      var vUndefined;
+      var vNull = null;
+      var vObject = { nome: "Objeto" };
+      var vArray = [1, 2, 3];
+
+      document.getElementById("pstring").innerText = "String: " + typeof vString;
+      document.getElementById("pnumero").innerText = "Number: " + typeof vNumber;
+      document.getElementById("pboolean").innerText = "Boolean: " + typeof vBoolean;
+      document.getElementById("pundefined").innerText = "Undefined: " + typeof vUndefined;
+      document.getElementById("pnull").innerText = "Null: " + typeof vNull; // JS retorna object para null (curiosidade da linguagem)
+      document.getElementById("pobject").innerText = "Object: " + typeof vObject;
+      document.getElementById("parray").innerText = "Array: " + typeof vArray;
+
+      console.log("String + Number: ", vString + vNumber);
+      console.log("Boolean * Number: ", vBoolean * vNumber);
+      console.log("Number + Number: ", vNumber + 50);
+
+      document.getElementById("resultados-operacoes").innerText = "Operações realizadas. Verifique o console (F12).";
+    }
+  </script>
+</body>
+</html>
