@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide Flex Transition</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      background-color: #000;
+    }
+
+    .painel {
+      flex: 1; 
+      background-size: cover;
+      background-position: center;
+      transition: flex 0.7s cubic-bezier(0.25, 0.8, 0.25, 1); 
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .painel:hover {
+      flex: 5;
+    }
+
+    .painel span {
+      color: white;
+      font-size: 30px;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .painel:hover span {
+      opacity: 1; 
+    }
+
+    .img1 { background-image: url('https://picsum.photos/800/600?random=1'); }
+    .img2 { background-image: url('https://picsum.photos/800/600?random=2'); }
+    .img3 { background-image: url('https://picsum.photos/800/600?random=3'); }
+    .img4 { background-image: url('https://picsum.photos/800/600?random=4'); }
+    .img5 { background-image: url('https://picsum.photos/800/600?random=5'); }
+
+  </style>
+</head>
+<body>
+  <div class="painel img1"><span>Montanha</span></div>
+  <div class="painel img2"><span>Praia</span></div>
+  <div class="painel img3"><span>Cidade</span></div>
+  <div class="painel img4"><span>Floresta</span></div>
+  <div class="painel img5"><span>Deserto</span></div>
+</body>
+</html>

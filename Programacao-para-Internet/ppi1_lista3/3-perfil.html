@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil Card</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background-color: #eee; display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+    .card {
+      background: white;
+      width: 300px;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .foto {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3498db;
+      margin-bottom: 15px;
+    }
+
+    h2 { margin: 0; color: #333; }
+    p { color: #777; font-size: 14px; margin: 10px 0 20px; }
+
+    .botoes { display: flex; justify-content: space-between; gap: 10px; }
+    
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+    }
+
+    .btn-follow { background-color: #3498db; }
+    .btn-msg { background-color: #2ecc71; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.pravatar.cc/300" alt="Pessoa" class="foto">
+    <h2>Ana Silva</h2>
+    <p>Desenvolvedora Front-end apaixonada por CSS, Flexbox e Grid.</p>
+    
+    <div class="botoes">
+      <button class="btn-follow">Seguir</button>
+      <button class="btn-msg">Mensagem</button>
+    </div>
+  </div>
+</body>
+</html>

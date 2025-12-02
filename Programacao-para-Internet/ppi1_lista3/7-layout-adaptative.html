@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Adaptativo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .main-container {
+      display: flex;
+      flex: 1; 
+    }
+
+    nav {
+      background-color: #ccc;
+      width: 20%;
+      padding: 20px;
+    }
+
+    main {
+      background-color: #eee;
+      width: 60%;
+      padding: 20px;
+    }
+
+    aside {
+      background-color: #ccc;
+      width: 20%;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+
+      nav, main, aside {
+        width: 100%; 
+        box-sizing: border-box; 
+        padding: 15px;
+      }
+      
+      nav { order: 1; background-color: #bbb; }
+      main { order: 2; }
+      aside { order: 3; background-color: #bbb; }
+    }
+  </style>
+</head>
+<body>
+  <header>HEADER</header>
+
+  <div class="main-container">
+    <nav>NAV (Menu)</nav>
+    <main>
+      <h1>Conteúdo Principal</h1>
+      <p>Redimensione a janela do navegador para ver o layout mudar.</p>
+      <p>Em telas grandes: 3 colunas.</p>
+      <p>Em telas pequenas: 1 coluna única.</p>
+    </main>
+    <aside>ASIDE (Lateral)</aside>
+  </div>
+
+  <footer>FOOTER</footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Bandeiras CSS</title>
+  <style>
+    body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; background-color: #f4f4f4; padding: 20px; }
+    h2 { margin-bottom: 5px; }
+    
+    .bandeira {
+      width: 300px;
+      height: 200px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+      background-color: white;
+    }
+
+    .japao {
+      position: relative;
+      background-color: white;
+    }
+    .circulo-vermelho {
+      width: 120px;
+      height: 120px;
+      background-color: #bc002d;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .alemanha {
+      display: flex;
+      flex-direction: column;
+    }
+    .alemanha div { flex: 1; width: 100%; }
+    .de-preto { background-color: black; }
+    .de-vermelho { background-color: #dd0000; }
+    .de-amarelo { background-color: #ffce00; }
+
+    .holanda {
+      display: flex;
+      flex-direction: column;
+    }
+    .holanda div { flex: 1; width: 100%; }
+    .nl-vermelho { background-color: #ae1c28; }
+    .nl-branco { background-color: white; }
+    .nl-azul { background-color: #21468b; }
+
+  </style>
+</head>
+<body>
+  <h2>Japão</h2>
+  <div class="bandeira japao">
+    <div class="circulo-vermelho"></div>
+  </div>
+
+  <h2>Alemanha</h2>
+  <div class="bandeira alemanha">
+    <div class="de-preto"></div>
+    <div class="de-vermelho"></div>
+    <div class="de-amarelo"></div>
+  </div>
+
+  <h2>Holanda</h2>
+  <div class="bandeira holanda">
+    <div class="nl-vermelho"></div>
+    <div class="nl-branco"></div>
+    <div class="nl-azul"></div>
+  </div>
+</body>
+</html>

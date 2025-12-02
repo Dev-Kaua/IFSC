@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Mobile First</title>
+  <style>
+    body {
+      font-family: 'Verdana', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #6c5ce7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .quadrado {
+      height: 100px;
+      background-color: #dfe6e9;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 500px) {
+        header {
+          background-color: #d63031; 
+          font-size: 14px;
+        }
+
+        .galeria {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          border: 2px solid #d63031;
+        }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Minha Galeria</h1>
+    <p>Abaixo de 500px, fico vermelho e com 1 coluna.</p>
+  </header>
+
+  <div class="galeria">
+    <div class="card"><div class="quadrado"></div>Item 1</div>
+    <div class="card"><div class="quadrado"></div>Item 2</div>
+    <div class="card"><div class="quadrado"></div>Item 3</div>
+    <div class="card"><div class="quadrado"></div>Item 4</div>
+    <div class="card"><div class="quadrado"></div>Item 5</div>
+    <div class="card"><div class="quadrado"></div>Item 6</div>
+  </div>
+
+</body>
+</html>

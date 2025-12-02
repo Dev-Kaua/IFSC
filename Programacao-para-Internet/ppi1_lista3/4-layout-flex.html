@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Flexbox</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column; 
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container-principal {
+        display: flex;
+        flex: 1;
+    }
+
+    aside {
+      background-color: #34495e;
+      color: white;
+      width: 200px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    aside a {
+      color: #ecf0f1;
+      text-decoration: none;
+      padding: 10px;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 4px;
+    }
+
+    aside a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    main {
+      flex: 1;
+      background-color: #ecf0f1;
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #7f8c8d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>HEADER</header>
+
+  <div class="container-principal">
+    <aside>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </aside>
+    
+    <main>
+      <h1>Conteúdo Principal</h1>
+      <p>Esta área se ajusta automaticamente (flex: 1).</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </main>
+  </div>
+
+  <footer>FOOTER</footer>
+
+</body>
+</html>
