@@ -11,14 +11,10 @@ function calcular() {
     var resultado = document.getElementById('resultado').value;
 
     if (resultado) {
-        // REQUISITO DE SEGURANÇA 
-        // Expressão Regular (Regex). Permite apenas números e operadores matemáticos
-        // Isso impede que alguém injete código JS malicioso no eval
         const caracteresValidos = /^[0-9+\-*/().\s]*$/;
 
         if (caracteresValidos.test(resultado)) {
             try {
-                // REQUISITO: Uso da função eval() 
                 document.getElementById('resultado').value = eval(resultado);
             } catch (e) {
                 alert("Erro na expressão!");
