@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo Joana Barbosa</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; min-height: 100vh; }
+        
+        /* Barra Lateral Esquerda */
+        aside {
+            background-color: #3b4149;
+            color: white;
+            width: 300px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .foto {
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 5px solid #555;
+        }
+
+        .titulo-lateral {
+            align-self: flex-start;
+            width: 100%;
+            border-bottom: 1px solid #777;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .info-pessoal p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .info-pessoal strong { display: block; margin-top: 10px; font-size: 12px; color: #bbb; }
+
+        /* Conteúdo Principal */
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: white;
+            color: #333;
+        }
+
+        h1 { margin-top: 0; font-size: 36px; margin-bottom: 10px; }
+        
+        .resumo { color: #666; line-height: 1.6; margin-bottom: 40px; }
+
+        h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; color: #333; font-size: 20px; text-transform: uppercase; }
+
+        .job { margin-bottom: 20px; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .job h3 { margin: 0; font-size: 18px; color: #222; }
+        .data { color: #888; font-size: 14px; }
+        .empresa { font-style: italic; color: #555; margin-bottom: 10px; display: block; }
+        
+        ul { padding-left: 20px; color: #444; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <aside>
+        <img src="https://i.pravatar.cc/300?img=5" alt="Joana" class="foto">
+        
+        <div class="titulo-lateral">Pessoal</div>
+        <div class="info-pessoal">
+            <strong>Nome</strong>
+            <p>Joana Barbosa</p>
+            
+            <strong>Endereço</strong>
+            <p>Rua da Paz, 250<br>7100-011 Lisboa</p>
+            
+            <strong>Número de telefone</strong>
+            <p>9630002121</p>
+            
+            <strong>Email</strong>
+            <p>exemplos@cvmaker.pt</p>
+        </div>
+    </aside>
+
+    main>
+        <h1>Joana Barbosa</h1>
+        <p class="resumo">
+            Uma marketer digital com sentido de missão e com mais de três anos de experiência em conduzir iniciativas promocionais. Sou uma especialista em online marketing, lead generation e nurturing. Tenho uma comunicação exemplar, aptidões interpessoais e trabalho bem sob pressão.
+        </p>
+
+        <h2>Experiência profissional</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Junior SEO Marketer</h3>
+                <span class="data">2017 - 2019</span>
+            </div>
+            <span class="empresa">Cyanca, Lisboa</span>
+            <ul>
+                <li>Página on/off SEO</li>
+                <li>Estratégias de linkbuilding</li>
+                <li>Criação de conteúdo relevante</li>
+                <li>Trabalho com ferramentas online: Ahrefs, Google Analytics.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Assistente de Vendas</h3>
+                <span class="data">2015 - 2016</span>
+            </div>
+            <span class="empresa">Salsa, Lisboa</span>
+            <ul>
+                <li>Contribuição para os objetivos de vendas</li>
+                <li>Gestão de inventário</li>
+                <li>Apoio a clientes</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

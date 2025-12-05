@@ -1,0 +1,7 @@
+/*Uma regra CSS é o bloco de código que define como um elemento HTML deve ser estilizado.
+ Ela é composta por um Seletor (quem será estilizado) e um Bloco de Declaração 
+ (quais estilos aplicar). */ 
+/* Seletor: p | Propriedade: color | Valor: blue */
+p {
+   color: blue;
+}

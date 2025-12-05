@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo especificidade</title>
+    <style>
+        /* PESOS DE ESPECIFICIDADE:
+           Tag = 1
+           Class = 10
+           ID = 100
+           Inline = 1000 
+        */
+
+        /* Regra 1 (Peso 001): Todos os li são vermelhos */
+        li { color: red; }
+        
+        /* Regra 2 (Peso 010): Classe .churras é verde */
+        .churras { color: green; }
+        
+        /* Regra 3 (Peso 010): Classe .fruta é cinza */
+        .fruta { color: gray; }
+        
+        /* Regra 4 (Peso 012): li vizinho de li com classe churras */
+        li + li.churras { color: black; }
+        
+        /* Regra 5 (Peso 020): Classe churras com atributo draggable */
+        .churras[draggable="true"] { color: magenta; }
+        
+        /* Regra 6 (Peso 100): IDs específicos são azuis */
+        #lip1, #lip2, #lip3 { color: blue; }
+        
+        /* Regra 7 (Peso 110): ID lip3 com classe fruta é laranja */
+        #lip3.fruta { color: orange; }
+        
+        /* Regra 8 (Peso 112): ID + Classe + Tag */
+        ol > li.churras#lip5 { color: purple; }
+    </style>
+</head>
+<body>
+    <ol>
+        <li id="lip0">Abacaxi (Vermelho)</li>
+
+        <li class="fruta">Melão (Cinza)</li>
+
+        <li id="lip2" class="fruta">Pera (Azul)</li>
+
+        <li id="lip3" class="fruta">Uva (Laranja)</li>
+
+        <li id="lip4" class="fruta">Maçã (Cinza)</li>
+
+        <li class="churras">Carne (Verde)</li>
+
+        <li class="churras">Linguiça (Preto)</li>
+
+        <li id="lip7" class="churras" draggable="true">Pão de alho (Magenta)</li>
+    </ol>
+</body>
+</html>

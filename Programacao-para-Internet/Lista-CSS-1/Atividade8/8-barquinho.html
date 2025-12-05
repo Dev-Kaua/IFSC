@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Barquinho CSS</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, #87CEEB 0%, #E0F7FA 70%, #2980b9 70%); /* Céu e Mar básico */
+            overflow: hidden; /* Evita barra de rolagem */
+            position: relative;
+        }
+
+        /* --- O MAR --- */
+        .mar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30%;
+            background-color: #2980b9;
+            z-index: 10;
+        }
+        
+        /* Ondas usando pseudo-elementos */
+        .mar::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            width: 100%;
+            height: 40px;
+            background: radial-gradient(circle, #2980b9 50%, transparent 60%);
+            background-size: 40px 40px;
+        }
+
+        /* --- A NUVEM --- */
+        .nuvem {
+            position: absolute;
+            top: 50px;
+            left: -200px;
+            width: 120px;
+            height: 60px;
+            background: white;
+            border-radius: 50px;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+            animation: moverNuvem 15s linear infinite;
+        }
+        .nuvem::after, .nuvem::before {
+            content: "";
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+        .nuvem::after { width: 50px; height: 50px; top: -25px; left: 20px; }
+        .nuvem::before { width: 40px; height: 40px; top: -15px; left: 60px; }
+
+        /* --- O BARCO --- */
+        .barco-container {
+            position: absolute;
+            bottom: 25%; /* Logo acima do mar */
+            left: -150px;
+            animation: navegar 10s linear infinite;
+            z-index: 20;
+        }
+
+        .barco {
+            font-size: 100px; /* Tamanho do emoji */
+            /* Animação de balanço separada do movimento lateral */
+            animation: balancar 2s ease-in-out infinite alternate;
+        }
+
+        /* --- KEYFRAMES (Animações) --- */
+        
+        /* 1. Mover da esquerda para direita */
+        @keyframes navegar {
+            0% { left: -150px; }
+            100% { left: 110%; }
+        }
+
+        /* 2. Balançar nas ondas */
+        @keyframes balancar {
+            0% { transform: rotate(-5deg) translateY(0); }
+            100% { transform: rotate(5deg) translateY(10px); }
+        }
+
+        /* 3. Mover nuvem */
+        @keyframes moverNuvem {
+            0% { left: -200px; }
+            100% { left: 110%; }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="nuvem"></div>
+    
+    <div class="barco-container">
+        <div class="barco">⛵</div>
+    </div>
+
+    <div class="mar"></div>
+
+</body>
+</html>

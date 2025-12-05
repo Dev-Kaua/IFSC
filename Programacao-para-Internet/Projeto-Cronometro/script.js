@@ -18,10 +18,9 @@ function atualizarDisplay() {
 
 function iniciar() {
   if (!estaRodando) {
-    // REQUISITO: Usar Date para calcular o tempo real do sistema
+
     const tempoInicial = Date.now() - tempoDecorrido;
     
-    // REQUISITO: Usar setInterval para atualizar a interface
     intervalo = setInterval(() => {
       tempoDecorrido = Date.now() - tempoInicial;
       atualizarDisplay();
@@ -36,7 +35,7 @@ function pausar() {
     clearInterval(intervalo);
     estaRodando = false;
     
-    // REQUISITO: Registrar a pausa na lista
+
     registrarNaLista();
   }
 }
@@ -46,7 +45,7 @@ function zerar() {
   tempoDecorrido = 0;
   estaRodando = false;
   atualizarDisplay();
-  // Limpa a lista de paradas visualmente
+  
   document.getElementById('lista-paradas').innerHTML = '';
 }
 
@@ -58,7 +57,7 @@ function registrarNaLista() {
 }
 
 
-//Atalhos de teclado
+
 document.addEventListener('keydown', function(event) {
   const tecla = event.key.toLowerCase();
   

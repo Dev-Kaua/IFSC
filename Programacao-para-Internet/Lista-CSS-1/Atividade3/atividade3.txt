@@ -1,0 +1,9 @@
+Existem 3 formas principais de incluir CSS em um documento HTML:
+
+1 - Inline (Na linha): Usando o atributo style="" diretamente na tag HTML.
+ (Ex: <p style="color:red;">Texto</p>).
+
+2 - Interno (Na página): Usando a tag <style> dentro do <head> do documento HTML.
+
+3 - Externo (Arquivo separado): Criando um arquivo .css (ex: estilo.css) e vinculando-o
+ ao HTML com a tag <link rel="stylesheet" href="estilo.css">. É a forma mais recomendada.
