@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trabalho de Dispositivos Móveis\nAluno: Kauã Reis Rodrigues"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O que é Intent?\nUma Intent é uma mensagem que solicita uma ação a outro componente do Android.\n\nIntent Explícita:\nEspecifica exatamente a classe do componente destino (ex: abrir outra tela do próprio app).\n\nIntent Implícita:\nDeclara uma ação geral (ex: abrir URL) e o sistema operacional escolhe o app capaz de realizá-la."
+            android:textSize="14sp"
+            android:paddingBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnIntentExplicita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Testar Intent Explícita (Abrir Tela 2)" />
+
+        <Button
+            android:id="@+id/btnIntentImplicita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Testar Intent Implícita (Abrir Navegador)" />
+
+    </LinearLayout>
+</ScrollView>
