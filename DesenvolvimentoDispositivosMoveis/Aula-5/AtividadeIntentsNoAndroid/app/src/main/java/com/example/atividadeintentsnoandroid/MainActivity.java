@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btnImplicita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri webpage = Uri.parse("https://www.google.com");
+                Uri webpage = Uri.parse("https://www.facebook.com/marketplace");
                 Intent intentImplicita = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(intentImplicita);
             }
