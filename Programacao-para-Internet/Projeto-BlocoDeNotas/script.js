@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderizarLista();
 });
 
-// requisito: Salvar no localStorage em formato de json
+
 function carregarNotasDoStorage() {
   const dados = localStorage.getItem('notasApp');
   if (dados) {
@@ -76,7 +76,7 @@ function renderizarLista() {
   });
 }
 
-// requisito: clicar sobre a nota deve abrir ela
+
 function carregarNota(id) {
   const nota = notas.find(n => n.id === id);
   if (nota) {
@@ -87,7 +87,7 @@ function carregarNota(id) {
   }
 }
 
-// requisito: excluir a nota com confirmação
+
 function excluirNota() {
   if (notaAtualId === null) {
     alert("Nenhuma nota selecionada para excluir.");
